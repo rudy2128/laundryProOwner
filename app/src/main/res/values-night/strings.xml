@@ -136,6 +136,11 @@
     <string name="code_ex">k001</string>
     <string name="day">hari</string>
     <string name="qty_service">Quantity Service</string>
+    <string name="copy_service">Copy layanan</string>
+    <string name="message_copy">Masukan Kode Outlet yang akan di copy</string>
+    <string name="edit_phone">Edit Phone</string>
+    <string name="phone_no">Telephone</string>
+    <string name="image_outlet">Image Outlet</string>
     <string-array name="listSatuan">
         <item>Kg</item>
         <item>Stel</item>

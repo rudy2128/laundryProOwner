@@ -21,6 +21,7 @@ class OutletAdapter(private val context: Context,private val outlets:ArrayList<O
         val tvName: TextView = view.findViewById(R.id.tv_name)
         val tvCode: TextView = view.findViewById(R.id.tv_code)
         val tvAddress: TextView = view.findViewById(R.id.tv_address)
+        val tvPhone: TextView = view.findViewById(R.id.tv_phone)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OutViewHolder {
@@ -38,6 +39,7 @@ class OutletAdapter(private val context: Context,private val outlets:ArrayList<O
         holder.tvCode.text = out.outlet_code
         holder.tvName.text = out.outlet_name
         holder.tvAddress.text = out.outlet_address
+        holder.tvPhone.text = out.phone
 
 
         holder.itemView.setOnClickListener {
@@ -45,6 +47,8 @@ class OutletAdapter(private val context: Context,private val outlets:ArrayList<O
             i.putExtra("CODE",out.outlet_code)
             i.putExtra("NAME",out.outlet_name)
             i.putExtra("ADDRESS",out.outlet_address)
+            i.putExtra("PHONE",out.phone)
+            i.putExtra("IMAGE_OUTLET",out.imageUrl)
             context.startActivity(i)
         }
     }

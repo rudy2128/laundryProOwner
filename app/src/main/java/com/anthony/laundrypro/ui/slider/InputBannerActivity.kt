@@ -6,6 +6,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
@@ -21,6 +22,7 @@ class InputBannerActivity : AppCompatActivity() {
     private lateinit var imgBanner:ImageView
     private lateinit var btnChoose:Button
     private lateinit var btnSave:Button
+    private lateinit var btnBack:ImageButton
     private lateinit var mData:DatabaseReference
     private var mImageUri: Uri? = null
     private var person : String =""
@@ -40,6 +42,11 @@ class InputBannerActivity : AppCompatActivity() {
         imgBanner = findViewById(R.id.image_banner)
         btnChoose = findViewById(R.id.btn_choose)
         btnSave = findViewById(R.id.btn_save)
+        btnBack = findViewById(R.id.btn_back)
+
+        btnBack.setOnClickListener {
+            finish()
+        }
 
         btnChoose.setOnClickListener {
             selectImage()
@@ -60,7 +67,7 @@ class InputBannerActivity : AppCompatActivity() {
 
     private fun saveBanner(imageUri:String) {
         if (imageUri.isEmpty()){
-            Toast.makeText(applicationContext,"Ambil Foto dulu!!",Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext,"Pilih gambar dulu!!",Toast.LENGTH_SHORT).show()
         }else{
             val uri = Uri.parse(imageUri)
             val fileName = UUID.randomUUID().toString() +".jpg"

@@ -5,6 +5,7 @@ import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -26,6 +27,7 @@ class ProductActivity : AppCompatActivity() {
     private lateinit var tvQty:TextView
     private var products = arrayListOf<Product>()
     private lateinit var btnBack:ImageButton
+    private lateinit var btnCopy:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product)
@@ -34,12 +36,22 @@ class ProductActivity : AppCompatActivity() {
         tvQty = findViewById(R.id.tv_qty_service)
         btnAdd = findViewById(R.id.btn_add)
         btnBack = findViewById(R.id.btn_back)
+        btnCopy = findViewById(R.id.btn_copy)
+
+
 
         btnBack.setOnClickListener {
             finish()
         }
 
         val codeOutlet = intent.getStringExtra("CODE_OUTLET").toString()
+
+        btnCopy.setOnClickListener {
+            val i = Intent(applicationContext,CopyActivity::class.java)
+            i.putExtra("CODE_OUTLET",codeOutlet)
+            startActivity(i)
+
+        }
 
         btnAdd.setOnClickListener {
             val i = Intent(applicationContext,InputUpdateActivity::class.java)

@@ -82,21 +82,37 @@
         android:id="@+id/rvPro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btn_add"
+        android:layout_above="@+id/lay_third"
         android:layout_marginStart="@dimen/twenty"
         android:layout_marginEnd="@dimen/twenty"
         android:layout_marginTop="@dimen/twenty"
         android:layout_below="@id/lay_second"
         android:layout_marginBottom="@dimen/twenty"
         tools:listitem="@layout/item_product"/>
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btn_add"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+    <LinearLayout
+        android:id="@+id/lay_third"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/v_margin"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:src="@drawable/baseline_add_circle_24"
-        android:contentDescription="@string/add_service"
-        android:layout_margin="@dimen/v_margin"/>
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_copy"
+            android:layout_width="@dimen/m_150"
+            android:layout_height="wrap_content"
+            android:background="@drawable/line_trans"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/twenty"
+            android:text="@string/copy_service"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m_150"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/baseline_add_circle_24"
+            android:contentDescription="@string/add_service"/>
+
+    </LinearLayout>
 
 </RelativeLayout>

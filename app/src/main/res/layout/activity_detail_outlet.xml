@@ -41,6 +41,15 @@
             android:contentDescription="@string/outlet_info"
             android:src="@drawable/ic_laundry"
             android:background="@drawable/line_grey"/>
+        <ImageButton
+            android:id="@+id/btn_edit"
+            android:layout_width="@dimen/fifty"
+            android:layout_height="@dimen/fifty"
+            android:layout_marginTop="@dimen/v_margin"
+            android:src="@drawable/baseline_edit_note_24"
+            android:background="@drawable/line_trans"
+            android:contentDescription="@string/edit_profile"
+            android:layout_gravity="center_horizontal"/>
        <androidx.cardview.widget.CardView
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
@@ -110,7 +119,8 @@
             app:cardMaxElevation="1dp"
             app:cardUseCompatPadding="true">
             <LinearLayout
-                android:layout_width="match_parent"
+                android:id="@+id/lay_phone"
+                android:layout_width="@dimen/m_250"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <TextView

@@ -84,8 +84,8 @@ class OutletActivity : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()){
                     outlets.clear()
-                    for (i in snapshot.children){
-                        val out = i.getValue(Outlet::class.java)
+                    for (data in snapshot.children){
+                        val out = data.getValue(Outlet::class.java)
                         outlets.add(out!!)
                     }
 
