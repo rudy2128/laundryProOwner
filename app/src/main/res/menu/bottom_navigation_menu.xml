@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/page_home"
+        android:enabled="true"
+        android:icon="@drawable/baseline_add_home_24"
+        android:title="@string/home"/>
+    <item
+        android:id="@+id/page_employee"
+        android:enabled="true"
+        android:icon="@drawable/baseline_people_outline_24"
+        android:title="@string/employee"/>
+    <item
+        android:id="@+id/page_outlet"
+        android:enabled="true"
+        android:icon="@drawable/baseline_store_24"
+        android:title="@string/outlet"/>
+    <item
+        android:id="@+id/page_setting"
+        android:enabled="true"
+        android:icon="@drawable/baseline_settings_24"
+        android:title="@string/help"/>
+
+</menu>

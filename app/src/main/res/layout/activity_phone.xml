@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.PhoneActivity">
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/v_margin"
+        android:layout_marginEnd="@dimen/v_margin"
+        android:layout_marginTop="@dimen/fifty"
+        android:text="@string/otp_message"
+        android:textAlignment="center"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/edt_otp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/v_margin"
+        android:layout_marginEnd="@dimen/v_margin"
+        android:layout_marginTop="@dimen/fifty"
+        android:layout_below="@+id/tv_text"
+        android:hint="@string/code"
+        android:autofillHints="code OTP"
+        android:inputType="number"
+        />
+    <LinearLayout
+        android:id="@+id/lay_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_otp"
+        android:layout_marginTop="@dimen/fifty"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/v_margin"
+            android:text="@string/end_time"/>
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m_six"
+            android:layout_marginEnd="@dimen/v_margin"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_first"
+        android:layout_marginTop="@dimen/fifty"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/v_margin"
+            android:text="@string/end_message"/>
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/send_again"
+            android:textStyle="italic"
+            android:textColor="@color/blue"
+            android:layout_marginStart="@dimen/m_six"
+            android:layout_marginEnd="@dimen/v_margin"/>
+
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_next"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/fifty"
+        android:background="@drawable/btn_blue"
+        android:text="@string/next"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.reg.RegFirstActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/m_six"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/twenty"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/baseline_arrow_back_ios_24"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m_100"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="@string/register"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/twenty"
+        android:layout_marginEnd="@dimen/twenty"
+        android:layout_marginTop="@dimen/fifty"
+        android:textAlignment="center"
+        android:text="@string/phone_message"/>
+    <LinearLayout
+        android:layout_width="@dimen/m_300"
+        android:layout_height="wrap_content"
+        android:background="@drawable/_r15"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/thirty"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/v_margin"
+            android:text="@string/code_ri"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_phone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:layout_marginStart="@dimen/m_six"
+            android:padding="@dimen/m_six"
+            android:hint="@string/phone_ex"
+            android:autofillHints="@string/phone_ex"
+            android:inputType="phone"
+            android:imeOptions="actionNext"
+            android:background="@drawable/_r15"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/m_80"
+        android:layout_marginEnd="@dimen/m_80"
+        android:layout_marginBottom="@dimen/thirty"
+        android:text="@string/next"
+        android:background="@drawable/btn_blue"/>
+
+
+
+</LinearLayout>

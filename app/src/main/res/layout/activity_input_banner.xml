@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.slider.InputBannerActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/input_banner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/thirty"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+
+    <ImageView
+        android:id="@+id/image_banner"
+        android:layout_width="300dp"
+        android:layout_height="126dp"
+        android:layout_marginTop="@dimen/m_100"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/line_grey"
+        android:contentDescription="@string/input_banner"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_choose"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/thirty"
+        android:backgroundTint="@color/grey"
+        android:background="@drawable/btn_blue"
+        android:layout_below="@id/image_banner"
+        android:layout_centerHorizontal="true"
+        android:text="@string/choose_image"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_save"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_choose"
+        android:background="@drawable/btn_blue"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/thirty"
+        android:backgroundTint="@color/blue_soft"
+        android:text="@string/save"/>
+
+</RelativeLayout>
